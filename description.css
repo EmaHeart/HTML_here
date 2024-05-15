@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+h1, h2, p, h5{
+    padding : 10px 0;
+}
+body{
+    background-color: #fff5e5 !important;
+}
+.home{
+    position: relative;
+}
+.home  .nav{
+    border-bottom: 1px solid #1a1818;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.scrolled{
+    transition: all ease-in-out .3s;
+    background-color: #a1c5ff;
+    box-shadow: 0 0 10px 0 #000;
+}
+.navbar_toggle{
+    display: none;
+    cursor: pointer;
+}
+.home .nav li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+}
+/* servics */
+.gallery{
+    position: relative;
+}
+.gallery .img{
+    background-image: url(./img/bedroom1.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.gallery .img:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 500px; /* Should match the height of the image */
+    background-color: rgba(0, 0, 0, 0.438); /* Adjust opacity as needed */
+    z-index: 0; 
+}
+.gallery .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.gallery .title .title_big{
+    font-size: 90px;
+    color: #a1c5ff;
+
+}
+.gallery .title .title_small{
+    text-align: center;
+    font-size: 20px;
+    color: #fffcf2;
+}
+
+/* body */
+
+.body .row1 .title_big{
+    color: #3f3b3b;
+    margin-top: 20px;
+}
+.body .row1 .paths{
+    color: #3f3b3b;
+    padding-left: 20px;
+    /* margin-top: 20px; */
+    font-size: 12px;
+}
+.body .row1 .tags span{
+    color: #5c5301;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.body .row1 .tags img{
+    margin-right: 5px;
+    width: 15px;
+}
+.body .row2 .div{
+    margin: 20px 0;
+    padding: 20px;
+}
+.body .row2 .div h2{
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.body .row2  span{
+    margin-top: 30px;
+    margin-right: 5px;
+    background: #ffebbf;
+    padding: 10px;
+}
+.body .row2  span img{
+    margin-right: 5px;
+    width: 30px;
+}
+.body .row2 .list ul .item{
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+.body .row2 .list ul .item::before {
+    content: ""; /* Add content to the ::before pseudo-element */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #5c5301;
+    background-image: url(./icons/);
+    border-radius: 50%; /* Make it a circle */
+}
+.body .row2 .div2 .list2 .item1 {
+    margin-top: 10px;
+}
+.body .row2 .div2 .list2 .item1 .img_list2{
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* footer */
+.footer
+{
+    background-color: #1a1818;
+    padding: 10px;
+    margin-top: 20px;
+}
+.footer h1{
+    text-align: center;
+    font-size: 20px;
+    color: #fff5e5;
+}
+.footer h1 span{
+    color: #fff6a1;
+}
+
+@media (max-width: 768px) {
+    .home .nav {
+        opacity: 0.3;
+        transform: translate(-50%,-100%);
+    }
+    .home .navbar_toggle{
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+
+    .home .nav.open{
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translate(-50%,0);
+        transition: all ease-in-out .5s;
+    }
+    .home .navbar_toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin-bottom: 5px;
+        transition: all 0.3s;
+    }
+    .home .navbar_toggle.open span:nth-child(1){
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .home .navbar_toggle.open span:nth-child(2){
+        opacity: 0;
+    }
+    .home .navbar_toggle.open span:nth-child(3){
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+}
